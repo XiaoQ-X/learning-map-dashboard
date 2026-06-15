@@ -42,7 +42,9 @@ button:focus-visible {
 .hero {
   width: 100%;
   height: 310px;
-  background: url("/assets/hero.png") center / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .dashboard-content {

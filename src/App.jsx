@@ -21,12 +21,14 @@ const LINKS = {
   questionBank: "https://app.notion.com/p/479347002e5a41cca397c43ec3851c96",
 };
 
+const asset = (fileName) => `${import.meta.env.BASE_URL}assets/${fileName}`;
+
 const routeData = [
   {
     id: "route-408",
     tone: "violet",
     title: "408 专业课线路",
-    image: "/assets/route-408.png",
+    image: asset("route-408.png"),
     imageAlt: "408 专业课书籍插画",
     tags: ["数据结构", "计组", "操作系统", "计网"],
     cards: [
@@ -92,7 +94,7 @@ const routeData = [
     id: "route-math",
     tone: "pink",
     title: "数学与编程能力线路",
-    image: "/assets/route-math-code.png",
+    image: asset("route-math-code.png"),
     imageAlt: "数学与编程工具插画",
     tags: ["高数", "线代", "概率论", "C/C++", "Python", "AI/ML/DL"],
     cards: [
@@ -261,10 +263,14 @@ export function App() {
   return (
     <>
       <main className="dashboard-shell">
-        <div className="hero" aria-label="学习地图封面" />
+        <div
+          className="hero"
+          style={{ backgroundImage: `url(${asset("hero.png")})` }}
+          aria-label="学习地图封面"
+        />
         <div className="dashboard-content">
           <header className="page-heading">
-            <img src="/assets/map-icon.png" alt="" />
+            <img src={asset("map-icon.png")} alt="" />
             <h1>学习地图</h1>
           </header>
           <div className="intro-strip">两条并行学习线路，知识互相支撑，能力共同成长。</div>
