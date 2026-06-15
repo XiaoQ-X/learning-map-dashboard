@@ -18,6 +18,7 @@ const LINKS = {
   networkArchitecture: "https://app.notion.com/p/d038a0834a7a4fbf8b673b2475e598ad",
   calculusLimits: "https://app.notion.com/p/37edba7381d5816b9242f4aeb0dad05f",
   calculusDerivative: "https://app.notion.com/p/37edba7381d581df9ffaedd04b6f9037",
+  questionBank: "https://app.notion.com/p/479347002e5a41cca397c43ec3851c96",
 };
 
 const routeData = [
@@ -75,7 +76,8 @@ const routeData = [
         id: "408-questions",
         title: "题库",
         icon: BookOpen,
-        items: ["基础概念题", "过程模拟题", "计算题", "综合题", "错题归类"],
+        action: LINKS.questionBank,
+        items: ["408 专业课题库", "基础概念题", "过程模拟题", "综合题", "错题归类"],
         panelTitle: "408 专业课题库",
         panelItems: [
           "基础概念题：定义、性质、分类和易混点。",
@@ -142,11 +144,12 @@ const routeData = [
         id: "math-questions",
         title: "题库",
         icon: BookOpen,
+        action: LINKS.questionBank,
         items: [
+          "数学与编程题库",
           "数学基础题",
           "数学综合题",
           "编程语法题",
-          "实现与算法题",
           "AI/ML 练习题",
         ],
         panelTitle: "数学与编程能力题库",
